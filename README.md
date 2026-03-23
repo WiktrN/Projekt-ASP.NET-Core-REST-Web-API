@@ -52,7 +52,7 @@ Utwórz użytkownika, aby móc się później zalogować.
       "confirmPassword": "password",
       "natonality": "Polish",
       "dateOfBirth": "1999-01-01",
-      "roleId": 2
+      "roleId": 3
    }
    ```
 
