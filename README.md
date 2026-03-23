@@ -47,10 +47,10 @@ Utwórz użytkownika, aby móc się później zalogować.
   
    ```json
    {
-      "email": "test5@test.com",
-      "password": "password1",
-      "confirmPassword": "password1",
-      "natonality": "German",
+      "email": "test@test.com",
+      "password": "password",
+      "confirmPassword": "password",
+      "natonality": "Polish",
       "dateOfBirth": "1999-01-01"
    }
    ```
@@ -64,8 +64,8 @@ Zaloguj się, aby otrzymać klucz dostępu, który jest niezbędny do autoryzacj
 
    ```json
    {
-      "email": "test5@test.com",
-      "password": "password1"
+      "email": "test@test.com",
+      "password": "password"
    }
    ```
 * **Akcja:** Skopiuj długi ciąg znaków (token), który pojawi się w odpowiedzi.
