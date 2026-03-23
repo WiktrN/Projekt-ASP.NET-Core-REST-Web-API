@@ -10,8 +10,8 @@
 
         public PageResult(List<T> items, int totalCount, int pageSize, int pageNumber)
         {
-            Items = Items;
-            TotalItemsCount = TotalItemsCount;
+            Items = items;
+            TotalItemsCount = totalCount;
             ItemsFrom = pageSize * (pageNumber - 1) + 1;
             ItemsTo = ItemsFrom + pageSize - 1;
             TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize);

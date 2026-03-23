@@ -11,7 +11,7 @@ namespace RestaurantAPI.Models.Validators
         public RestaurantQueryValidator()
         {
             RuleFor(r => r.PageNumber).GreaterThanOrEqualTo(1);
-            RuleFor(r => r.PageNumber).Custom((value, context) =>
+            RuleFor(r => r.PageSize).Custom((value, context) =>
             {
                 if (!allowedPageSizes.Contains(value))
                 {

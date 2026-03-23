@@ -124,12 +124,13 @@ namespace RestaurantAPI.Services
                     : baseQuery.OrderByDescending(selectedColumn);
             }
             
+            var totalItemsCount = baseQuery.Count();
+
             var restaurants = baseQuery
                 .Skip(query.PageSize * (query.PageNumber - 1))
                 .Take(query.PageSize)
                 .ToList();
 
-            var totalItemsCount = baseQuery.Count();
 
             var restaurantsDtos = _mapper.Map<List<RestaurantDto>>(restaurants);
 
