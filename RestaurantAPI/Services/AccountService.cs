@@ -35,7 +35,7 @@ namespace RestaurantAPI.Services
             {
                 Email = dto.Email,
                 DateOfBirth = dto.DateOfBirth,
-                Nationality = dto.Natonality,
+                Nationality = dto.Nationality,
                 RoleId = dto.RoleId
             };
 
