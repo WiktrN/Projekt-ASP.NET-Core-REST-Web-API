@@ -51,10 +51,19 @@ Utwórz użytkownika, aby móc się później zalogować.
       "password": "password",
       "confirmPassword": "password",
       "natonality": "Polish",
-      "dateOfBirth": "1999-01-01"
+      "dateOfBirth": "1999-01-01",
+      "roleId": 2
    }
    ```
 
+### 🔑 Dostępne Role w Systemie
+
+| ID | Nazwa Roli | Opis Uprawnień |
+| :---: | :--- | :--- |
+| **1** | User | Podstawowy dostęp, przeglądanie restauracji. |
+| **2** | Manager | Możliwość dodawania i edycji własnych restauracji. |
+| **3** | Admin | Pełna kontrola nad wszystkimi zasobami w systemie. |
+   
 **2. Logowanie i uzyskanie tokena**
 
 Zaloguj się, aby otrzymać klucz dostępu, który jest niezbędny do autoryzacji zapytań.
