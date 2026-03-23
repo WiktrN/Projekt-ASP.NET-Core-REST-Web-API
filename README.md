@@ -30,10 +30,60 @@ Projekt posiada wbudowany interfejs Swagger, który pozwala na interaktywne test
 2. Upewnij się, że masz zainstalowany **SQL Server Management Studio**.
 3. Zaktualizuj `ConnectionString` w `appsettings.json` (jeśli korzystasz z innej instancji niż LocalDB).
 4. Wykonaj migrację bazy danych:
+
    ```bash
    dotnet ef database update
    ```
-   
+
+## 🛠️ Testowania API
+Projekt wykorzystuje autoryzację opartą na tokenach **JWT (JSON Web Token)**. Aby pobrać dane z bazy, postępuj zgodnie z poniższymi krokami w programie Postman:
+
+**1. Rejestracja nowego konta**
+
+Utwórz użytkownika, aby móc się później zalogować.
+* **Metoda:** `POST`
+* **URL:** `https://localhost:5001/api/account/register`
+* **Body (raw JSON):**
+  
+   ```json
+   {
+      "email": "test5@test.com",
+      "password": "password1",
+      "confirmPassword": "password1",
+      "natonality": "German",
+      "dateOfBirth": "1999-01-01"
+   }
+   ```
+
+**2. Logowanie i uzyskanie tokena**
+
+Zaloguj się, aby otrzymać klucz dostępu, który jest niezbędny do autoryzacji zapytań.
+* **Metoda:** `POST`
+* **URL:** `https://localhost:5001/api/account/login`
+* **Body (raw JSON):**
+
+   ```json
+   {
+      "email": "test5@test.com",
+      "password": "password1"
+   }
+   ```
+* **Akcja:** Skopiuj długi ciąg znaków (token), który pojawi się w odpowiedzi.
+
+**3. Pobieranie danych o restauracjach (z autoryzacją)**
+
+Teraz możesz wysłać zapytanie o dane, używając pobranego tokena.
+* **Metoda:** `GET`
+* **URL:** `https://localhost:5001/api/restaurant/`
+* **Parametry (Zakładka Params):**
+   * `PageNumber` : `1`
+   * `PageSize` : `5` (lub 10, 15)
+* **Nagłówki (Zakładka Headers):**
+   * **Key:** `Authorization`
+   * **Value:** `Bearer <WKLEJ_TUTAJ_SKOPIOWANY_TOKEN>`
+ 
+   (Pamiętaj o spacji między słowem Bearer a tokenem!)
+
    ---
 ### 🎓 Podziękowania / Credits
 Projekt został zrealizowany w celach edukacyjnych na podstawie kursu:
