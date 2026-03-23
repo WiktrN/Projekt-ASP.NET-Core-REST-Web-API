@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RestaurantAPI.Models
+﻿namespace RestaurantAPI.Models
 {
     public class RegisterUserDto
     {
