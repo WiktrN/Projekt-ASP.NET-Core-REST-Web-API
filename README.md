@@ -35,5 +35,6 @@ Projekt posiada wbudowany interfejs Swagger, który pozwala na interaktywne test
    ```
    
    ---
-### Credits
-Projekt zrealizowany na podstawie kursu **"Praktyczny kurs ASP.NET Core REST Web API od podstaw"** (Udemy). Rozbudowany o własne poprawki i konfigurację pod .NET 6.
+### 🎓 Podziękowania / Credits
+Projekt został zrealizowany w celach edukacyjnych na podstawie kursu:
+"Praktyczny kurs ASP.NET Core REST Web API od podstaw (C#)" Autor: Jakub Kozera (Udemy).
